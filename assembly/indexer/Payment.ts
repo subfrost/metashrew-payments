@@ -1,6 +1,7 @@
 import { Block } from "metashrew-as/assembly/blockdata/block";
 import { Input, Output } from "metashrew-as/assembly/blockdata/transaction";
 import { OUTPOINT_TO_OUTPUT } from "metashrew-spendables/assembly/tables";
+import { SpendablesIndex } from "metashrew-spendables/assembly/indexer";
 import { PAYMENTS_TABLE } from "../tables/tables";
 import { Box } from "metashrew-as/assembly/utils/box";
 
@@ -22,16 +23,17 @@ export class PaymentTuple {
   constructor(senders: ArrayBuffer[], amount: u64) {
     this.senders = senders;
     this.amount = amount;
-  };
-};
-export class PaymentsIndex {
-  static indexBlock(height: u32, block: Block): void {
+  }
+}
+export class PaymentsIndex extends SpendablesIndex {
+  indexBlock(height: u32, block: Block): void {
+    super.indexBlock(height, block);
     for (let i = 0; i < block.transactions.length; i++) {
       const tx = block.transactions[i];
       let inputs = tx.ins;
       let inputIndex = 0;
       // amts are 1:1 with inputs
-      let inputAmounts = this.getInputAmounts(inputs);
+      let inputAmounts = PaymentsIndex.getInputAmounts(inputs);
       for (let j = 0; j < tx.outs.length; j++) {
         const output = tx.outs[j];
         let amountRemaining = output.value;
@@ -72,15 +74,16 @@ export class PaymentsIndex {
       }
     }
   }
- 
 
   // gets the senders and the amounts sent to a specific address
   static paymentsToAddress(height: u32, address: ArrayBuffer): PaymentTuple {
-    const recipientPtr = PAYMENTS_TABLE.selectValue<u32>(height).keyword("/").select(address);
+    const recipientPtr = PAYMENTS_TABLE.selectValue<u32>(height)
+      .keyword("/")
+      .select(address);
     const senderList = recipientPtr.getList();
     let senders = new Array<ArrayBuffer>(senderList.length);
-    let totalReceived: u64  = 0;
-    for(let i = 0; i < senderList.length; i++) {
+    let totalReceived: u64 = 0;
+    for (let i = 0; i < senderList.length; i++) {
       senders[i] = senderList[i];
       const amt = recipientPtr.keyword("/").select(senders[i]).getValue<u64>();
       totalReceived += amt;

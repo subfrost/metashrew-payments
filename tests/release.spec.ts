@@ -5,8 +5,7 @@ import { IndexerProgram } from "metashrew-test";
 import path from "path";
 
 describe("metashrew payment", () => {
-  it("indexes a single payment with multiplke inputs and a single output", async () => {
-  });
+  it("indexes a single payment with multiplke inputs and a single output", async () => {});
 });
 describe("metashrew index", () => {
   it("indexes the genesis block", async () => {
@@ -24,7 +23,7 @@ describe("metashrew index", () => {
     );
     program.setBlockHeight(0);
     program.on("log", (v) => console.log(v));
-    await program.run('_start');
+    await program.run("_start");
     // console.log(program.kv);
   });
   it("indexes the first inscription", async () => {
@@ -42,7 +41,7 @@ describe("metashrew index", () => {
     );
     program.setBlockHeight(767430);
     program.on("log", (v) => console.log(v));
-    const ms = await program.run('_start');
+    const ms = await program.run("_start");
     // console.log(program.kv);
     // console.log(String(ms) + "ms");
   });
@@ -61,7 +60,7 @@ describe("metashrew index", () => {
     );
     program.setBlockHeight(785391);
     program.on("log", (v) => console.log(v));
-    const ms = await program.run('_start');
+    const ms = await program.run("_start");
     // console.log(program.kv);
     // console.log(String(ms) + "ms");
   });
@@ -80,10 +79,8 @@ describe("metashrew index", () => {
     );
     program.setBlockHeight(772904);
     program.on("log", (v) => console.log(v));
-    const ms = await program.run('_start');
+    const ms = await program.run("_start");
     // console.log(program.kv);
     // console.log(String(ms) + "ms");
   });
-
-    
 });

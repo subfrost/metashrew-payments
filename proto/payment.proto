@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package payments;
+
+message Payment {
+  uint32 height = 1;
+  bytes recipient = 2;
+}
+
+message SenderAddress {
+  bytes sender = 1;
+}
+
+message PaymentResponse {
+  bytes recipient = 1;
+  repeated SenderAddress senders = 2;
+  uint64 amount = 3;
+}

@@ -8,8 +8,8 @@
     "build": "npm-run-all build:protoc build:as build:ts",
     "build:debug:preloader": "npm run asbuild:preloader --sharedMemory",
     "build:ts": "tsc",
-    "build:protoc:as": "protoc --plugin=./node_modules/.bin/protoc-gen-as --as_out=assembly/proto --as_opt targetFileName=protorune.ts --proto_path=./ proto/protorune.proto",
-    "build:protoc:ts": "protoc --ts_out src.ts/proto --proto_path proto protorune.proto",
+    "build:protoc:as": "protoc --plugin=./node_modules/.bin/protoc-gen-as --as_out=assembly/proto --as_opt targetFileName=payment.ts --proto_path=./ proto/payment.proto",
+    "build:protoc:ts": "protoc --ts_out ./src.ts --proto_path proto payment.proto",
     "build:protoc": "npm-run-all build:protoc:as build:protoc:ts",
     "prettier:assemblyscript": "prettier --write ./assembly/**/*.ts",
     "prettier:ts": "prettier --write ./src.ts/**/*.ts ./tests/**.ts ./tests/**/*.ts",
@@ -17,13 +17,10 @@
     "test": "ts-mocha --timeout 0 ./tests/**.spec.ts",
     "test:view": "ts-mocha --timeout 0 ./tests/view.spec.ts",
     "test:release": "ts-mocha --timeout 0 ./tests/release.spec.ts",
-    "test:protorunes": "ts-mocha --timeout 0 ./tests/proto*.spec.ts",
-    "clean": "rm -rf build lib assembly/proto/protorune.ts src.ts/proto/protorune.ts",
-    "postinstall": "yarn build",
-    "cli": "node lib/cli.js"
+    "postinstall": "yarn build"
   },
   "dependencies": {
-    "@protobuf-ts/protoc": "^2.9.4",
+    "@protobuf-ts/runtime": "^2.9.4",
     "@types/chai": "^4.3.16",
     "@types/mocha": "^10.0.7",
     "@types/yargs": "^17.0.32",
@@ -34,6 +31,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "@protobuf-ts/protoc": "^2.9.4",
     "@types/node": "^20.10.6",
     "assemblyscript": "^0.27.29",
     "assemblyscript-prettier": "^3.0.1",
@@ -46,6 +44,7 @@
     "mocha": "^10.7.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.1.1",
+    "protobuf-as": "https://github.com/sandshrewmetaprotocols/protobuf-as",
     "rlp": "^3.0.0",
     "ts-mocha": "^10.0.0",
     "typescript": "^5.3.3"
