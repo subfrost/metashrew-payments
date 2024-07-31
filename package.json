@@ -4,12 +4,23 @@
   "scripts": {
     "asbuild:debug": "asc assembly/index.ts --target debug --enable threads --config asconfig.json",
     "asbuild:release": "asc assembly/index.ts --target release --config asconfig.json",
-    "build": "npm-run-all asbuild:debug asbuild:release",
+    "build:as": "npm-run-all asbuild:debug asbuild:release",
+    "build": "npm-run-all build:protoc build:as build:ts",
     "build:debug:preloader": "npm run asbuild:preloader --sharedMemory",
+    "build:ts": "tsc",
+    "build:protoc:as": "protoc --plugin=./node_modules/.bin/protoc-gen-as --as_out=assembly/proto --as_opt targetFileName=protorune.ts --proto_path=./ proto/protorune.proto",
+    "build:protoc:ts": "protoc --ts_out src.ts/proto --proto_path proto protorune.proto",
+    "build:protoc": "npm-run-all build:protoc:as build:protoc:ts",
     "prettier:assemblyscript": "prettier --write ./assembly/**/*.ts",
-    "prettier:ts": "prettier --write ./src.ts/**/*.ts",
+    "prettier:ts": "prettier --write ./src.ts/**/*.ts ./tests/**.ts ./tests/**/*.ts",
     "prettier": "npm-run-all prettier:assemblyscript prettier:ts",
-    "test": "ts-mocha --timeout 0 ./tests/**.spec.ts"
+    "test": "ts-mocha --timeout 0 ./tests/**.spec.ts",
+    "test:view": "ts-mocha --timeout 0 ./tests/view.spec.ts",
+    "test:release": "ts-mocha --timeout 0 ./tests/release.spec.ts",
+    "test:protorunes": "ts-mocha --timeout 0 ./tests/proto*.spec.ts",
+    "clean": "rm -rf build lib assembly/proto/protorune.ts src.ts/proto/protorune.ts",
+    "postinstall": "yarn build",
+    "cli": "node lib/cli.js"
   },
   "dependencies": {
     "@protobuf-ts/protoc": "^2.9.4",

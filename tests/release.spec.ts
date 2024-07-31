@@ -4,7 +4,10 @@ import { EventEmitter } from "events";
 import { IndexerProgram } from "metashrew-test";
 import path from "path";
 
-
+describe("metashrew payment", () => {
+  it("indexes a single payment with multiplke inputs and a single output", async () => {
+  });
+});
 describe("metashrew index", () => {
   it("indexes the genesis block", async () => {
     const program = new IndexerProgram(
