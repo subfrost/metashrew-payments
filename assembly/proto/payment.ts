@@ -254,7 +254,7 @@ namespace __proto {
         // Something went beyond our capability to understand
         default:
           throw new Error(
-            `Invalid wire type ${wireType} at offset ${this.pos}`,
+            `Invalid wire type ${wireType} at offset ${this.pos}`
           );
       }
     }
@@ -611,22 +611,22 @@ namespace __proto {
       return value < 128
         ? 1 // 2^7
         : value < 16384
-          ? 2 // 2^14
-          : value < 2097152
-            ? 3 // 2^21
-            : value < 268435456
-              ? 4 // 2^28
-              : value < 34359738368
-                ? 5 // 2^35
-                : value < 4398046511104
-                  ? 6 // 2^42
-                  : value < 562949953421312
-                    ? 7 // 2^49
-                    : value < 72057594037927936
-                      ? 8 // 2^56
-                      : value < 9223372036854775808
-                        ? 9 // 2^63
-                        : 10;
+        ? 2 // 2^14
+        : value < 2097152
+        ? 3 // 2^21
+        : value < 268435456
+        ? 4 // 2^28
+        : value < 34359738368
+        ? 5 // 2^35
+        : value < 4398046511104
+        ? 6 // 2^42
+        : value < 562949953421312
+        ? 7 // 2^49
+        : value < 72057594037927936
+        ? 8 // 2^56
+        : value < 9223372036854775808
+        ? 9 // 2^63
+        : 10;
     }
 
     @inline
@@ -725,13 +725,13 @@ export namespace payments {
     // Encodes Payment to the ArrayBuffer
     encode(): ArrayBuffer {
       return changetype<ArrayBuffer>(
-        StaticArray.fromArray<u8>(this.encodeU8Array()),
+        StaticArray.fromArray<u8>(this.encodeU8Array())
       );
     }
 
     // Encodes Payment to the Array<u8>
     encodeU8Array(
-      encoder: __proto.Encoder = new __proto.Encoder(new Array<u8>()),
+      encoder: __proto.Encoder = new __proto.Encoder(new Array<u8>())
     ): Array<u8> {
       const buf = encoder.buf;
 
@@ -795,13 +795,13 @@ export namespace payments {
     // Encodes SenderAddress to the ArrayBuffer
     encode(): ArrayBuffer {
       return changetype<ArrayBuffer>(
-        StaticArray.fromArray<u8>(this.encodeU8Array()),
+        StaticArray.fromArray<u8>(this.encodeU8Array())
       );
     }
 
     // Encodes SenderAddress to the Array<u8>
     encodeU8Array(
-      encoder: __proto.Encoder = new __proto.Encoder(new Array<u8>()),
+      encoder: __proto.Encoder = new __proto.Encoder(new Array<u8>())
     ): Array<u8> {
       const buf = encoder.buf;
 
@@ -846,9 +846,9 @@ export namespace payments {
                 new DataView(
                   decoder.view.buffer,
                   decoder.pos + decoder.view.byteOffset,
-                  length,
-                ),
-              ),
+                  length
+                )
+              )
             );
             decoder.skip(length);
 
@@ -894,13 +894,13 @@ export namespace payments {
     // Encodes PaymentResponse to the ArrayBuffer
     encode(): ArrayBuffer {
       return changetype<ArrayBuffer>(
-        StaticArray.fromArray<u8>(this.encodeU8Array()),
+        StaticArray.fromArray<u8>(this.encodeU8Array())
       );
     }
 
     // Encodes PaymentResponse to the Array<u8>
     encodeU8Array(
-      encoder: __proto.Encoder = new __proto.Encoder(new Array<u8>()),
+      encoder: __proto.Encoder = new __proto.Encoder(new Array<u8>())
     ): Array<u8> {
       const buf = encoder.buf;
 
