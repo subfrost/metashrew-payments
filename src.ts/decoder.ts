@@ -2,7 +2,6 @@ import { PaymentResponse, PaymentRequest } from "./payment";
 import { stripHexPrefix } from "metashrew-runes/src.ts/utils";
 
 export function decodePaymentResponse(hex: string): {
-    recipent: string;
     senders: string[];
     amount: bigint;
 }{
@@ -10,7 +9,6 @@ export function decodePaymentResponse(hex: string): {
         Uint8Array.from(Buffer.from(stripHexPrefix(hex), "hex"))
     );
     return {
-        recipent: Buffer.from(output.recipient).toString("utf-8"),
         senders: output.senders.map((sender) => Buffer.from(sender.sender).toString("utf-8")),
         amount: output.amount
     }

@@ -1,8 +1,6 @@
 'use strict';
 import * as payment from "./decoder";
-import * as wallet from "metashrew-runes/src.ts/wallet";
 import url from "url";
-import { OutPoint, RuneOutput } from "metashrew-runes/src.ts/";
 
 const addHexPrefix = (s) => s.substr(0, 2) === '0x' ? s : '0x' + s;
 
@@ -41,17 +39,18 @@ export class MetashrewPayments {
     return addHexPrefix(response.result);
   }
   async sendersperpayment({
-    address: string
+    address: string,
+    height: number
   }: any): Promise<{
-    outpoints: OutPoint[];
-    balanceSheet: RuneOutput[];
+    senders: string[];
+    amount: bigint;
   }> {
-    const buffer = wallet.encodeWalletInput(string);
+    const buffer = payment.encodePaymentInput(string, number);
     const byteString = await this._call({
-      method: 'runesbyaddress',
+      method: 'sendersperpayment',
       input: buffer
     });
-    const decoded = wallet.decodeWalletOutput(byteString);
+    const decoded = payment.decodePaymentResponse(byteString);
     return decoded;
   }
 }
