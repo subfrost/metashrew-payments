@@ -1,2 +1,5 @@
-export declare function decodePaymentResponse(): void;
-export declare function encodePaymentInput(address: string, height: string): void;
+export declare function decodePaymentResponse(hex: string): {
+    senders: string[];
+    amount: bigint;
+};
+export declare function encodePaymentInput(address: string, height: number): string;

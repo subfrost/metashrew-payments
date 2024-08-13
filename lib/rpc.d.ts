@@ -1,4 +1,3 @@
-import { OutPoint, RuneOutput } from "metashrew-runes/src.ts/";
 export declare class MetashrewPayments {
     baseUrl: string;
     blockTag: string;
@@ -7,8 +6,8 @@ export declare class MetashrewPayments {
         method: any;
         input: any;
     }): Promise<string>;
-    sendersperpayment({ address: string }: any): Promise<{
-        outpoints: OutPoint[];
-        balanceSheet: RuneOutput[];
+    sendersperpayment({ address: string, height: number }: any): Promise<{
+        senders: string[];
+        amount: bigint;
     }>;
 }

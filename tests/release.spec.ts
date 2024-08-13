@@ -13,7 +13,7 @@ import {
   buildTransaction,
 } from "metashrew-runes/lib/tests/utils/block-helpers";
 import { DEBUG_WASM } from "metashrew-runes/lib/tests/utils/general";
-import { sendersPerPayment } from "../assembly/view/payment";
+import { sendersperpayment } from "./utils/payment-helpers";
 import { input } from "metashrew-as/assembly/indexer";
 
 describe("metashrew-payments", () => {
@@ -98,7 +98,7 @@ describe("metashrew-payments", () => {
     block.transactions?.push(transaction);
     program.setBlock(block.toHex());
     await program.run("_start");
-    const result = await sendersPerPayment(program, TEST_BTC_ADDRESS1, height);
+    const result = await sendersperpayment(program, "bc1qjhggrhmlrcz3hwup0l9reeg4dfxw56qd3n7xcd", height);
     console.log(result);
     expect(true);
 
