@@ -11,9 +11,9 @@ import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 /**
- * @generated from protobuf message payments.Payment
+ * @generated from protobuf message payments.PaymentRequest
  */
-export interface Payment {
+export interface PaymentRequest {
     /**
      * @generated from protobuf field: uint32 height = 1;
      */
@@ -50,22 +50,22 @@ export interface PaymentResponse {
     amount: bigint;
 }
 // @generated message type with reflection information, may provide speed optimized methods
-class Payment$Type extends MessageType<Payment> {
+class PaymentRequest$Type extends MessageType<PaymentRequest> {
     constructor() {
-        super("payments.Payment", [
+        super("payments.PaymentRequest", [
             { no: 1, name: "height", kind: "scalar", T: 13 /*ScalarType.UINT32*/ },
             { no: 2, name: "recipient", kind: "scalar", T: 12 /*ScalarType.BYTES*/ }
         ]);
     }
-    create(value?: PartialMessage<Payment>): Payment {
+    create(value?: PartialMessage<PaymentRequest>): PaymentRequest {
         const message = globalThis.Object.create((this.messagePrototype!));
         message.height = 0;
         message.recipient = new Uint8Array(0);
         if (value !== undefined)
-            reflectionMergePartial<Payment>(this, message, value);
+            reflectionMergePartial<PaymentRequest>(this, message, value);
         return message;
     }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: Payment): Payment {
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: PaymentRequest): PaymentRequest {
         let message = target ?? this.create(), end = reader.pos + length;
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
@@ -87,7 +87,7 @@ class Payment$Type extends MessageType<Payment> {
         }
         return message;
     }
-    internalBinaryWrite(message: Payment, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+    internalBinaryWrite(message: PaymentRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
         /* uint32 height = 1; */
         if (message.height !== 0)
             writer.tag(1, WireType.Varint).uint32(message.height);
@@ -101,9 +101,9 @@ class Payment$Type extends MessageType<Payment> {
     }
 }
 /**
- * @generated MessageType for protobuf message payments.Payment
+ * @generated MessageType for protobuf message payments.PaymentRequest
  */
-export const Payment = new Payment$Type();
+export const PaymentRequest = new PaymentRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class SenderAddress$Type extends MessageType<SenderAddress> {
     constructor() {

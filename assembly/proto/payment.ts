@@ -671,19 +671,19 @@ namespace __proto {
   }
 }
 export namespace payments {
-  export class Payment {
+  export class PaymentRequest {
     public height: u32;
     public recipient: Array<u8> = new Array<u8>();
 
-    // Decodes Payment from an ArrayBuffer
-    static decode(buf: ArrayBuffer): Payment {
-      return Payment.decodeDataView(new DataView(buf));
+    // Decodes PaymentRequest from an ArrayBuffer
+    static decode(buf: ArrayBuffer): PaymentRequest {
+      return PaymentRequest.decodeDataView(new DataView(buf));
     }
 
-    // Decodes Payment from a DataView
-    static decodeDataView(view: DataView): Payment {
+    // Decodes PaymentRequest from a DataView
+    static decodeDataView(view: DataView): PaymentRequest {
       const decoder = new __proto.SafeDecoder(view);
-      const obj = new Payment();
+      const obj = new PaymentRequest();
 
       while (!decoder.eof()) {
         const tag = decoder.tag();
@@ -704,9 +704,9 @@ export namespace payments {
             break;
         }
       }
-      if (decoder.invalid()) return changetype<Payment>(0);
+      if (decoder.invalid()) return changetype<PaymentRequest>(0);
       return obj;
-    } // decode Payment
+    } // decode PaymentRequest
 
     public size(): u32 {
       let size: u32 = 0;
@@ -722,14 +722,14 @@ export namespace payments {
       return size;
     }
 
-    // Encodes Payment to the ArrayBuffer
+    // Encodes PaymentRequest to the ArrayBuffer
     encode(): ArrayBuffer {
       return changetype<ArrayBuffer>(
         StaticArray.fromArray<u8>(this.encodeU8Array())
       );
     }
 
-    // Encodes Payment to the Array<u8>
+    // Encodes PaymentRequest to the Array<u8>
     encodeU8Array(
       encoder: __proto.Encoder = new __proto.Encoder(new Array<u8>())
     ): Array<u8> {
@@ -746,8 +746,8 @@ export namespace payments {
       }
 
       return buf;
-    } // encode Payment
-  } // Payment
+    } // encode PaymentRequest
+  } // PaymentRequest
 
   export class SenderAddress {
     public sender: Array<u8> = new Array<u8>();

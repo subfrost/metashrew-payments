@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package payments;
 
-message Payment {
+message PaymentRequest {
   uint32 height = 1;
   bytes recipient = 2;
 }

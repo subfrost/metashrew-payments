@@ -1,5 +1,5 @@
 'use strict';
-
+import * as payment from "./decoder";
 import * as wallet from "metashrew-runes/src.ts/wallet";
 import url from "url";
 import { OutPoint, RuneOutput } from "metashrew-runes/src.ts/";
@@ -40,7 +40,7 @@ export class MetashrewPayments {
     })).json());
     return addHexPrefix(response.result);
   }
-  async runesbyaddress({
+  async sendersperpayment({
     address: string
   }: any): Promise<{
     outpoints: OutPoint[];

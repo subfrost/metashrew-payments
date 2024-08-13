@@ -5,9 +5,9 @@ import type { IBinaryReader } from "@protobuf-ts/runtime";
 import type { PartialMessage } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 /**
- * @generated from protobuf message payments.Payment
+ * @generated from protobuf message payments.PaymentRequest
  */
-export interface Payment {
+export interface PaymentRequest {
     /**
      * @generated from protobuf field: uint32 height = 1;
      */
@@ -43,16 +43,16 @@ export interface PaymentResponse {
      */
     amount: bigint;
 }
-declare class Payment$Type extends MessageType<Payment> {
+declare class PaymentRequest$Type extends MessageType<PaymentRequest> {
     constructor();
-    create(value?: PartialMessage<Payment>): Payment;
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: Payment): Payment;
-    internalBinaryWrite(message: Payment, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter;
+    create(value?: PartialMessage<PaymentRequest>): PaymentRequest;
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: PaymentRequest): PaymentRequest;
+    internalBinaryWrite(message: PaymentRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter;
 }
 /**
- * @generated MessageType for protobuf message payments.Payment
+ * @generated MessageType for protobuf message payments.PaymentRequest
  */
-export declare const Payment: Payment$Type;
+export declare const PaymentRequest: PaymentRequest$Type;
 declare class SenderAddress$Type extends MessageType<SenderAddress> {
     constructor();
     create(value?: PartialMessage<SenderAddress>): SenderAddress;
