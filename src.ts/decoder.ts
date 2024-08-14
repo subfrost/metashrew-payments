@@ -1,5 +1,6 @@
 import { PaymentResponse, PaymentRequest } from "./payment";
-import { stripHexPrefix } from "metashrew-runes/src.ts/utils";
+
+export const stripHexPrefix = (s) => s.substr(0, 2) === '0x' ? s.substr(2) : s;
 
 export function decodePaymentResponse(hex: string): {
     senders: string[];

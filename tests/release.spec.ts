@@ -4,11 +4,10 @@ import fs from "fs-extra";
 //@ts-ignore
 import bitcoinjs = require("bitcoinjs-lib");
 import { EventEmitter } from "events";
-import { IndexerProgram } from "metashrew-test";
-
 import { buildProgram } from "metashrew-runes/lib/tests/utils/general"
 import path from "path";
 import {
+  buildCoinbase,
   buildDefaultBlock,
   buildTransaction,
 } from "metashrew-runes/lib/tests/utils/block-helpers";
@@ -22,6 +21,7 @@ describe("metashrew-payments", () => {
     const program = buildProgram(DEBUG_WASM);
     const height = 853768;
     program.setBlockHeight(height);
+
     const prevIns2 = [
       {
         inputTxHash: Buffer.from('2f093cf7e647991d81370297249e9abede6bf3ab29384b1f1b622e1d17599e18', "hex"),
@@ -34,7 +34,7 @@ describe("metashrew-payments", () => {
     ];
     const prevOuts2 = [
       {
-        script: bitcoinjs.payments.p2pkh({
+        script: bitcoinjs.payments.p2wpkh({
           address: 'bc1q3y8zn4m74cg5ctvvc7f9t87wjnrqdm5fguyvw7',
           network: bitcoinjs.networks.bitcoin,
         }).output,
@@ -45,7 +45,7 @@ describe("metashrew-payments", () => {
           address: '17XwVXXE6Y5U7QU4NdALFmKvjsEz7wJAcZ',
           network: bitcoinjs.networks.bitcoin,
         }).output,
-        value: 36329529,
+        value: 4615706,
       }
     ];
     const prevIns1 = [
@@ -94,7 +94,19 @@ describe("metashrew-payments", () => {
 
     const transaction = buildTransaction(inputs, outputs);
     const block = buildDefaultBlock();
-    const prevBlock = buildDefaultBlock();
+    block.transactions?.push(buildCoinbase(
+      [
+        {
+          script: bitcoinjs.payments.p2pkh({
+            address: '1PuJjnF476W3zXfVYmJfGnouzFDAXakkL4',
+            network: bitcoinjs.networks.bitcoin,
+          }),
+          value: 324047160,
+        }
+      ]
+    ));
+    block.transactions?.push(buildTransaction(prevIns1, prevOuts1));
+    block.transactions?.push(buildTransaction(prevIns2, prevOuts2));
     block.transactions?.push(transaction);
     program.setBlock(block.toHex());
     await program.run("_start");

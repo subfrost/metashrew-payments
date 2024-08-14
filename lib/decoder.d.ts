@@ -1,3 +1,4 @@
+export declare const stripHexPrefix: (s: any) => any;
 export declare function decodePaymentResponse(hex: string): {
     senders: string[];
     amount: bigint;
