@@ -7,6 +7,8 @@ import { Transaction, Input, Output } from "metashrew-as/assembly/blockdata/tran
 import { console } from "metashrew-as/assembly/utils/logging";
 import { toRLP, RLPItem } from "metashrew-as/assembly/utils/rlp";
 
+export * from "./view";
+
 export function _start(): void {
   const data = input();
   const box = Box.from(data);
