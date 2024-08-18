@@ -14,8 +14,6 @@ import {
 import { EMPTY_BUFFER, EMPTY_WITNESS, buildBytes32 } from "metashrew-runes/lib/tests/utils/general";
 import { sendersperpayment } from "./utils/payment-helpers";
 import { input } from "metashrew-as/assembly/indexer";
-import { console } from "metashrew-as/assembly/utils/logging";
-
 
 const DEBUG_WASM = fs.readFileSync(path.join(__dirname, '..', 'build', 'debug.wasm'));
 

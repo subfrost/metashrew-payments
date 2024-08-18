@@ -5,6 +5,7 @@ import { Block } from "metashrew-as/assembly/blockdata/block";
 import { Transaction, Input, Output } from "metashrew-as/assembly/blockdata/transaction";
 import { console } from "metashrew-as/assembly/utils/logging";
 import { toRLP, RLPItem } from "metashrew-as/assembly/utils/rlp";
+import { PaymentsIndex } from "./indexer/Payment";
 
 export * from "./view";
 
@@ -14,5 +15,6 @@ export function _start(): void {
   const height = parsePrimitive<u32>(box);
   const block = new Block(box);
   console.log("got block " + height.toString(10));
+  new PaymentsIndex().indexBlock(height, block);
   _flush();
 }

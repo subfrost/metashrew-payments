@@ -28,6 +28,7 @@ export class PaymentTuple {
 }
 export class PaymentsIndex extends SpendablesIndex {
   indexBlock(height: u32, block: Block): void {
+    console.log(">> inside indexer")
     super.indexBlock(height, block);
     for (let i = 0; i < block.transactions.length; i++) {
       const tx = block.transactions[i];
@@ -38,6 +39,7 @@ export class PaymentsIndex extends SpendablesIndex {
       for (let j = 0; j < tx.outs.length; j++) {
         const output = tx.outs[j];
         let amountRemaining = output.value;
+        console.log(">> inside indexer, current amount remaining is" + amountRemaining.toString());
         while (amountRemaining > 0 && inputIndex < inputs.length) {
           const curr = inputs[inputIndex];
           const amt = inputAmounts[inputIndex];
@@ -103,6 +105,7 @@ export class PaymentsIndex extends SpendablesIndex {
       const prev_out = inputs[i].previousOutput().toArrayBuffer();
       const output = OUTPOINT_TO_OUTPUT.select(prev_out).unwrap();
       amts[i] = bytesToOutput(output).value;
+      console.log(">> inside getInputAmounts, current amount is" + amts[i].toString());
     }
     return amts;
   }

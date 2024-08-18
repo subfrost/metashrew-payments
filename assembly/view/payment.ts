@@ -15,6 +15,9 @@ export function sendersperpayment(): ArrayBuffer {
   const buffer_address = changetype<Uint8Array>(address).buffer;
   // then using the recipient address, get the senders from the index
   const paymentTuple = Index.paymentsToAddress(height, buffer_address);
+  for( let i = 0; i < paymentTuple.senders.length; i++) {
+    console.log(">> VIEW: senders ->" + Box.from(paymentTuple.senders[i]).toHexString());
+  }
   let senders = new Array<protobuf.SenderAddress>();
   for (let i = 0; i < paymentTuple.senders.length; i++) {
     const addr = new protobuf.SenderAddress();
