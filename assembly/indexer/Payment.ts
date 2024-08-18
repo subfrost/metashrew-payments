@@ -4,6 +4,7 @@ import { OUTPOINT_TO_OUTPUT } from "metashrew-spendables/assembly/tables";
 import { SpendablesIndex } from "metashrew-spendables/assembly/indexer";
 import { PAYMENTS_TABLE } from "../tables/tables";
 import { Box } from "metashrew-as/assembly/utils/box";
+import { console } from "metashrew-as/assembly/utils/logging";
 
 function intoAddress(output: Output): ArrayBuffer {
   const address = output.intoAddress();
@@ -77,6 +78,7 @@ export class PaymentsIndex extends SpendablesIndex {
 
   // gets the senders and the amounts sent to a specific address
   static paymentsToAddress(height: u32, address: ArrayBuffer): PaymentTuple {
+    console.log(">> inside paymentsToAddress")
     const recipientPtr = PAYMENTS_TABLE.selectValue<u32>(height)
       .keyword("/")
       .select(address);
@@ -86,8 +88,11 @@ export class PaymentsIndex extends SpendablesIndex {
     for (let i = 0; i < senderList.length; i++) {
       senders[i] = senderList[i];
       const amt = recipientPtr.keyword("/").select(senders[i]).getValue<u64>();
+      console.log(">> current sender: " + Box.from(senders[i]).toHexString() + " & amount: " + amt.toString());
       totalReceived += amt;
     }
+    console.log(">> totalReceived: " + totalReceived.toString());
+    console.log(">> EXITING paymentsToAddress")
     return new PaymentTuple(senders, totalReceived);
   }
 

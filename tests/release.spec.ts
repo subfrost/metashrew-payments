@@ -14,6 +14,8 @@ import {
 import { EMPTY_BUFFER, EMPTY_WITNESS, buildBytes32 } from "metashrew-runes/lib/tests/utils/general";
 import { sendersperpayment } from "./utils/payment-helpers";
 import { input } from "metashrew-as/assembly/indexer";
+import { console } from "metashrew-as/assembly/utils/logging";
+
 
 const DEBUG_WASM = fs.readFileSync(path.join(__dirname, '..', 'build', 'debug.wasm'));
 
@@ -111,18 +113,6 @@ describe("metashrew-payments", () => {
     const transaction = buildTransaction(inputs, outputs);
     const block = buildDefaultBlock();
     block.transactions?.push(buildCoinbaseToAddress('1PuJjnF476W3zXfVYmJfGnouzFDAXakkL4'));
-    /*
-      [
-        {
-          script: bitcoinjs.payments.p2pkh({
-            address: '1PuJjnF476W3zXfVYmJfGnouzFDAXakkL4',
-            network: bitcoinjs.networks.bitcoin,
-          }),
-          value: 324047160,
-        }
-      ]
-    ));
-   */
     block.transactions?.push(buildTransaction(prevIns1, prevOuts1));
     block.transactions?.push(buildTransaction(prevIns2, prevOuts2));
     block.transactions?.push(transaction);
@@ -131,7 +121,5 @@ describe("metashrew-payments", () => {
     const result = await sendersperpayment(program, "bc1qjhggrhmlrcz3hwup0l9reeg4dfxw56qd3n7xcd", height);
     console.log(result);
     expect(true);
-
-
   });
 });
