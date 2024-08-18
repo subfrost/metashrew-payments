@@ -37,36 +37,12 @@ describe("metashrew-payments", () => {
     const program = buildProgram(DEBUG_WASM);
     const height = 853768;
     program.setBlockHeight(height);
-
-    const prevIns2 = [
-      {
-        hash: Buffer.from('2f093cf7e647991d81370297249e9abede6bf3ab29384b1f1b622e1d17599e18', "hex"),
-        index: 0,
-      },
-      {
-        hash: Buffer.from('2f093cf7e647991d81370297249e9abede6bf3ab29384b1f1b622e1d17599e18', "hex"),
-        index: 1,
-      }
-    ];
-    const prevOuts2 = [
-      {
-        script: bitcoinjs.payments.p2wpkh({
-          address: 'bc1q3y8zn4m74cg5ctvvc7f9t87wjnrqdm5fguyvw7',
-          network: bitcoinjs.networks.bitcoin,
-        }).output,
-        value: 50000000,
-      },
-      {
-        script: bitcoinjs.payments.p2pkh({
-          address: '17XwVXXE6Y5U7QU4NdALFmKvjsEz7wJAcZ',
-          network: bitcoinjs.networks.bitcoin,
-        }).output,
-        value: 4615706,
-      }
-    ];
+    const block = buildDefaultBlock();
+    const coinbase = buildCoinbaseToAddress('1PuJjnF476W3zXfVYmJfGnouzFDAXakkL4');
+    block.transactions?.push(coinbase);
     const prevIns1 = [
       {
-        hash: Buffer.from('839f1ffda22c3ace710f88a8fbe84d4198fd8e5b804b341a30bc51f9559c9c2a', "hex"),
+        hash: coinbase.getHash(),
         index: 0,
       }
     ];
@@ -86,7 +62,36 @@ describe("metashrew-payments", () => {
         value: 9264,
       }
     ];
-
+    const transaction1 = buildTransaction(prevIns1, prevOuts1);
+    block.transactions.push(transaction1);
+    const prevIns2 = [
+      {
+        hash: transaction1.getHash(),
+        index: 0,
+      },
+      {
+        hash: transaction1.getHash(),
+        index: 1,
+      }
+    ];
+    const prevOuts2 = [
+      {
+        script: bitcoinjs.payments.p2wpkh({
+          address: 'bc1q3y8zn4m74cg5ctvvc7f9t87wjnrqdm5fguyvw7',
+          network: bitcoinjs.networks.bitcoin,
+        }).output,
+        value: 50000000,
+      },
+      {
+        script: bitcoinjs.payments.p2pkh({
+          address: '17XwVXXE6Y5U7QU4NdALFmKvjsEz7wJAcZ',
+          network: bitcoinjs.networks.bitcoin,
+        }).output,
+        value: 4615706,
+      }
+    ];
+    const transaction2 = buildTransaction(prevIns2, prevOuts2);
+    block.transactions?.push(transaction2);
     const outputs = [
       {
         script: bitcoinjs.payments.p2wpkh({
@@ -99,25 +104,21 @@ describe("metashrew-payments", () => {
     ];
     const inputs = [
       {
-        hash: Buffer.from('92574e7d0bbeb6dc02dbb4e783f799c6968ffff5417433fbab8b269a0af883c2', "hex"),
+        hash: transaction2.getHash(),
         index: 0,
       },
       {
-        hash: Buffer.from('92574e7d0bbeb6dc02dbb4e783f799c6968ffff5417433fbab8b269a0af883c2', "hex"),
+        hash: transaction2.getHash(),
         index: 1,
       },
     ];
 
-    const transaction = buildTransaction(inputs, outputs);
-    const block = buildDefaultBlock();
-    block.transactions?.push(buildCoinbaseToAddress('1PuJjnF476W3zXfVYmJfGnouzFDAXakkL4'));
-    block.transactions?.push(buildTransaction(prevIns1, prevOuts1));
-    block.transactions?.push(buildTransaction(prevIns2, prevOuts2));
-    block.transactions?.push(transaction);
+    const transaction3 = buildTransaction(inputs, outputs);
+    block.transactions?.push(transaction3);
     program.setBlock(block.toHex());
     await program.run("_start");
     const result = await sendersperpayment(program, "bc1qjhggrhmlrcz3hwup0l9reeg4dfxw56qd3n7xcd", height);
     console.log(result);
-    expect(true);
+    expect(true).to.eql(true);
   });
 });
