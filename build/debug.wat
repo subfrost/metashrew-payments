@@ -152,6 +152,7 @@
  (table $0 5 5 funcref)
  (elem $0 (i32.const 1) $~lib/metashrew-as/assembly/utils/utils/concat~anonymous|0 $~lib/metashrew-as/assembly/utils/box/Box.concat~anonymous|0 $~lib/metashrew-as/assembly/utils/box/Box.concat~anonymous|1 $~lib/metashrew-as/assembly/indexer/index/_flush~anonymous|0)
  (export "_start" (func $assembly/index/_start))
+ (export "toArrayBuffer" (func $assembly/view/payment/toArrayBuffer))
  (export "sendersperpayment" (func $assembly/view/payment/sendersperpayment))
  (export "memory" (memory $0))
  (start $~start)
@@ -11629,6 +11630,11 @@
   call $assembly/indexer/Payment/PaymentsIndex#indexBlock
   call $~lib/metashrew-as/assembly/indexer/index/_flush
  )
+ (func $assembly/view/payment/toArrayBuffer (param $v i32) (result i32)
+  local.get $v
+  call $~lib/array/Array<u8>#get:dataStart
+  return
+ )
  (func $~lib/dataview/DataView#set:buffer (param $this i32) (param $buffer i32)
   local.get $this
   local.get $buffer
@@ -14795,10 +14801,8 @@
   local.set $address
   global.get $~lib/metashrew-as/assembly/utils/logging/console
   i32.const 6800
-  call $~lib/metashrew-as/assembly/indexer/index/input
-  i32.const 4
-  i32.const 1073741820
-  call $~lib/arraybuffer/ArrayBuffer#slice
+  local.get $address
+  call $assembly/view/payment/toArrayBuffer
   call $~lib/metashrew-as/assembly/utils/box/Box.from
   call $~lib/metashrew-as/assembly/utils/box/Box#toHexString
   call $~lib/string/String.__concat

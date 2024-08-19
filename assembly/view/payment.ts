@@ -5,11 +5,15 @@ import { payments as protobuf } from "../proto/payment";
 import { Box } from "metashrew-as/assembly/utils";
 import { console } from "metashrew-as/assembly/utils/logging";
 
+export function toArrayBuffer(v: Array<u8>): ArrayBuffer {
+  return changetype<ArrayBuffer>(v.dataStart);
+}
+
 export function sendersperpayment(): ArrayBuffer {
   console.log("inside view function")
   // get the address of the recipient from the protobuf
   const address = protobuf.PaymentRequest.decode(input().slice(4)).recipient;
-  console.log(">> VIEW: address ->" + Box.from(input().slice(4)).toHexString());
+  console.log(">> VIEW: address ->" + Box.from(toArrayBuffer(address)).toHexString());
   const height = protobuf.PaymentRequest.decode(input().slice(0, 4)).height;
   console.log(">> VIEW: height ->" + Box.from(input().slice(0, 4)).toHexString());  
   const buffer_address = changetype<Uint8Array>(address).buffer;

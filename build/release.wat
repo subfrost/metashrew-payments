@@ -172,6 +172,7 @@
  (table $0 5 5 funcref)
  (elem $0 (i32.const 1) $~lib/metashrew-as/assembly/utils/utils/concat~anonymous|0 $~lib/metashrew-as/assembly/utils/box/Box.concat~anonymous|0 $~lib/metashrew-as/assembly/utils/box/Box.concat~anonymous|1 $~lib/metashrew-as/assembly/indexer/index/_flush~anonymous|0)
  (export "_start" (func $assembly/index/_start))
+ (export "toArrayBuffer" (func $assembly/view/payment/toArrayBuffer))
  (export "sendersperpayment" (func $assembly/view/payment/sendersperpayment))
  (export "memory" (memory $0))
  (start $~start)
@@ -3102,14 +3103,14 @@
     if (result i32)
      i32.const 0
     else
-     block $__inlined_func$~lib/string/String.__eq$1044 (result i32)
+     block $__inlined_func$~lib/string/String.__eq$1045 (result i32)
       i32.const 1
       local.get $5
       i32.load
       local.tee $2
       local.get $1
       i32.eq
-      br_if $__inlined_func$~lib/string/String.__eq$1044
+      br_if $__inlined_func$~lib/string/String.__eq$1045
       drop
       i32.const 0
       local.get $1
@@ -3117,7 +3118,7 @@
       local.get $2
       i32.eqz
       i32.or
-      br_if $__inlined_func$~lib/string/String.__eq$1044
+      br_if $__inlined_func$~lib/string/String.__eq$1045
       drop
       i32.const 0
       local.get $2
@@ -3134,7 +3135,7 @@
       i32.const 1
       i32.shr_u
       i32.ne
-      br_if $__inlined_func$~lib/string/String.__eq$1044
+      br_if $__inlined_func$~lib/string/String.__eq$1045
       drop
       local.get $1
       local.set $3
@@ -7606,6 +7607,10 @@
   call $assembly/indexer/Payment/PaymentsIndex#indexBlock
   call $~lib/metashrew-as/assembly/indexer/index/_flush
  )
+ (func $assembly/view/payment/toArrayBuffer (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=4
+ )
  (func $~lib/dataview/DataView#getUint8 (param $0 i32) (param $1 i32) (result i32)
   local.get $1
   local.get $0
@@ -7956,7 +7961,7 @@
     local.set $0
     i32.const 5776
     local.set $2
-    block $__inlined_func$~lib/util/string/joinStringArray$561
+    block $__inlined_func$~lib/util/string/joinStringArray$562
      i32.const 7548
      i32.load
      i32.const 2
@@ -7967,7 +7972,7 @@
      local.tee $7
      i32.const 0
      i32.lt_s
-     br_if $__inlined_func$~lib/util/string/joinStringArray$561
+     br_if $__inlined_func$~lib/util/string/joinStringArray$562
      local.get $7
      i32.eqz
      if
@@ -7979,7 +7984,7 @@
        i32.const 5776
        local.set $2
       end
-      br $__inlined_func$~lib/util/string/joinStringArray$561
+      br $__inlined_func$~lib/util/string/joinStringArray$562
      end
      loop $for-loop|0
       local.get $4
@@ -9178,22 +9183,15 @@
   call $~lib/arraybuffer/ArrayBuffer#constructor
   local.tee $6
   call $~lib/metashrew-as/assembly/indexer/index/__load_input
+  i32.const 7664
   local.get $6
   i32.const 4
   i32.const 1073741820
   call $~lib/arraybuffer/ArrayBuffer#slice
   call $assembly/proto/payment/payments.PaymentRequest.decode
   i32.load offset=4
-  local.set $6
-  call $~lib/metashrew-as/assembly/indexer/index/__host_len
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $7
-  call $~lib/metashrew-as/assembly/indexer/index/__load_input
-  i32.const 7664
-  local.get $7
-  i32.const 4
-  i32.const 1073741820
-  call $~lib/arraybuffer/ArrayBuffer#slice
+  local.tee $6
+  i32.load offset=4
   local.tee $7
   local.get $7
   i32.const 20
@@ -9313,7 +9311,7 @@
     local.get $2
     call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Input>#__get
     call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Input>#__set
-    block $__inlined_func$~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>$1061 (result i64)
+    block $__inlined_func$~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>$1062 (result i64)
      i32.const 1
      global.set $~argumentsLength
      i64.const 0
@@ -9332,7 +9330,7 @@
      i32.sub
      i32.load offset=16
      i32.eqz
-     br_if $__inlined_func$~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>$1061
+     br_if $__inlined_func$~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>$1062
      drop
      i32.const 8
      call $~lib/arraybuffer/ArrayBuffer#constructor
