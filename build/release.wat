@@ -128,47 +128,47 @@
  (data $45.1 (i32.const 6616) "\02\00\00\00\16\00\00\00~\00l\00i\00b\00/\00m\00a\00p\00.\00t\00s")
  (data $46 (i32.const 6652) "\1c")
  (data $46.1 (i32.const 6664) "\02\00\00\00\02\00\00\00/")
- (data $47 (i32.const 6684) "l")
- (data $47.1 (i32.const 6696) "\02\00\00\00R\00\00\00>\00>\00 \00I\00N\00D\00E\00X\00E\00R\00:\00 \00c\00u\00r\00r\00e\00n\00t\00 \00t\00r\00a\00n\00s\00a\00c\00t\00i\00o\00n\00 \00i\00n\00d\00e\00x\00 \00i\00s\00 ")
- (data $48 (i32.const 6796) ",")
- (data $48.1 (i32.const 6808) "\02\00\00\00\16\00\00\00w\00i\00t\00h\00 \00t\00x\00i\00d\00:\00 ")
- (data $49 (i32.const 6844) "l")
- (data $49.1 (i32.const 6856) "\02\00\00\00X\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00g\00e\00t\00I\00n\00p\00u\00t\00A\00m\00o\00u\00n\00t\00s\00,\00 \00c\00u\00r\00r\00e\00n\00t\00 \00a\00m\00o\00u\00n\00t\00 \00i\00s")
- (data $50 (i32.const 6956) "\8c")
- (data $50.1 (i32.const 6968) "\02\00\00\00x\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00i\00n\00d\00e\00x\00e\00r\00,\00 \00c\00u\00r\00r\00e\00n\00t\00 \00a\00m\00o\00u\00n\00t\00 \00r\00e\00m\00a\00i\00n\00i\00n\00g\00 \00f\00o\00r\00 \00t\00r\00a\00n\00s\00a\00c\00t\00i\00o\00n\00:")
- (data $51 (i32.const 7100) "\1c")
- (data $51.1 (i32.const 7112) "\02\00\00\00\08\00\00\00i\00s\00:\00 ")
- (data $52 (i32.const 7132) ",")
- (data $52.1 (i32.const 7144) "\02\00\00\00\16\00\00\00U\00N\00S\00P\00E\00N\00D\00A\00B\00L\00E")
- (data $53 (i32.const 7180) "\1c")
- (data $53.1 (i32.const 7192) "\'\00\00\00\08\00\00\00\04")
- (data $54 (i32.const 7212) "<")
- (data $54.1 (i32.const 7224) "\02\00\00\00(\00\00\00i\00n\00s\00i\00d\00e\00 \00v\00i\00e\00w\00 \00f\00u\00n\00c\00t\00i\00o\00n")
- (data $55 (i32.const 7276) "<")
- (data $55.1 (i32.const 7288) "\02\00\00\00 \00\00\00~\00l\00i\00b\00/\00d\00a\00t\00a\00v\00i\00e\00w\00.\00t\00s")
- (data $56 (i32.const 7340) "<")
- (data $56.1 (i32.const 7352) "\02\00\00\00\"\00\00\00D\00e\00c\00o\00d\00e\00r\00 \00p\00o\00s\00i\00t\00i\00o\00n\00 ")
- (data $57 (i32.const 7404) "<")
- (data $57.1 (i32.const 7416) "\02\00\00\00\"\00\00\00 \00i\00s\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e\00!")
- (data $58 (i32.const 7468) "\1c\00\00\00\03\00\00\00\00\00\00\00.\00\00\00\0c\00\00\00\c0\1c\00\00\00\00\00\00\00\1d")
- (data $59 (i32.const 7500) "L")
- (data $59.1 (i32.const 7512) "\02\00\00\002\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00p\00r\00o\00t\00o\00/\00p\00a\00y\00m\00e\00n\00t\00.\00t\00s")
- (data $60 (i32.const 7580) "<")
- (data $60.1 (i32.const 7592) "\02\00\00\00&\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00a\00d\00d\00r\00e\00s\00s\00 \00-\00>")
- (data $61 (i32.const 7644) "<")
- (data $61.1 (i32.const 7656) "\02\00\00\00$\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00h\00e\00i\00g\00h\00t\00 \00-\00>")
- (data $62 (i32.const 7708) "L")
- (data $62.1 (i32.const 7720) "\02\00\00\006\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00p\00a\00y\00m\00e\00n\00t\00s\00T\00o\00A\00d\00d\00r\00e\00s\00s")
- (data $63 (i32.const 7788) "<")
- (data $63.1 (i32.const 7800) "\02\00\00\00&\00\00\00>\00>\00 \00c\00u\00r\00r\00e\00n\00t\00 \00s\00e\00n\00d\00e\00r\00:\00 ")
- (data $64 (i32.const 7852) ",")
- (data $64.1 (i32.const 7864) "\02\00\00\00\16\00\00\00 \00&\00 \00a\00m\00o\00u\00n\00t\00:\00 ")
- (data $65 (i32.const 7900) "<")
- (data $65.1 (i32.const 7912) "\02\00\00\00$\00\00\00>\00>\00 \00t\00o\00t\00a\00l\00R\00e\00c\00e\00i\00v\00e\00d\00:\00 ")
- (data $66 (i32.const 7964) "L")
- (data $66.1 (i32.const 7976) "\02\00\00\008\00\00\00>\00>\00 \00E\00X\00I\00T\00I\00N\00G\00 \00p\00a\00y\00m\00e\00n\00t\00s\00T\00o\00A\00d\00d\00r\00e\00s\00s")
- (data $67 (i32.const 8044) "<")
- (data $67.1 (i32.const 8056) "\02\00\00\00&\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00s\00e\00n\00d\00e\00r\00s\00 \00-\00>")
+ (data $47 (i32.const 6684) "|")
+ (data $47.1 (i32.const 6696) "\02\00\00\00h\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00g\00e\00t\00I\00n\00p\00u\00t\00A\00m\00o\00u\00n\00t\00s\00,\00 \00t\00h\00e\00 \00n\00u\00m\00b\00e\00r\00 \00o\00f\00 \00i\00n\00p\00u\00t\00s\00 \00i\00s\00:\00 ")
+ (data $48 (i32.const 6812) "l")
+ (data $48.1 (i32.const 6824) "\02\00\00\00X\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00g\00e\00t\00I\00n\00p\00u\00t\00A\00m\00o\00u\00n\00t\00s\00,\00 \00c\00u\00r\00r\00e\00n\00t\00 \00a\00m\00o\00u\00n\00t\00 \00i\00s")
+ (data $49 (i32.const 6924) "\8c")
+ (data $49.1 (i32.const 6936) "\02\00\00\00x\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00i\00n\00d\00e\00x\00e\00r\00,\00 \00c\00u\00r\00r\00e\00n\00t\00 \00a\00m\00o\00u\00n\00t\00 \00r\00e\00m\00a\00i\00n\00i\00n\00g\00 \00f\00o\00r\00 \00t\00r\00a\00n\00s\00a\00c\00t\00i\00o\00n\00:")
+ (data $50 (i32.const 7068) "\1c")
+ (data $50.1 (i32.const 7080) "\02\00\00\00\08\00\00\00i\00s\00:\00 ")
+ (data $51 (i32.const 7100) ",")
+ (data $51.1 (i32.const 7112) "\02\00\00\00\16\00\00\00U\00N\00S\00P\00E\00N\00D\00A\00B\00L\00E")
+ (data $52 (i32.const 7148) "\\")
+ (data $52.1 (i32.const 7160) "\02\00\00\00F\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00I\00N\00T\00O\00A\00D\00D\00R\00E\00S\00S\00,\00 \00a\00d\00d\00r\00e\00s\00s\00 \00i\00s\00:\00 ")
+ (data $53 (i32.const 7244) "\1c")
+ (data $53.1 (i32.const 7256) "\'\00\00\00\08\00\00\00\04")
+ (data $54 (i32.const 7276) "<")
+ (data $54.1 (i32.const 7288) "\02\00\00\00(\00\00\00i\00n\00s\00i\00d\00e\00 \00v\00i\00e\00w\00 \00f\00u\00n\00c\00t\00i\00o\00n")
+ (data $55 (i32.const 7340) "<")
+ (data $55.1 (i32.const 7352) "\02\00\00\00 \00\00\00~\00l\00i\00b\00/\00d\00a\00t\00a\00v\00i\00e\00w\00.\00t\00s")
+ (data $56 (i32.const 7404) "<")
+ (data $56.1 (i32.const 7416) "\02\00\00\00\"\00\00\00D\00e\00c\00o\00d\00e\00r\00 \00p\00o\00s\00i\00t\00i\00o\00n\00 ")
+ (data $57 (i32.const 7468) "<")
+ (data $57.1 (i32.const 7480) "\02\00\00\00\"\00\00\00 \00i\00s\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e\00!")
+ (data $58 (i32.const 7532) "\1c\00\00\00\03\00\00\00\00\00\00\00.\00\00\00\0c\00\00\00\00\1d\00\00\00\00\00\00@\1d")
+ (data $59 (i32.const 7564) "L")
+ (data $59.1 (i32.const 7576) "\02\00\00\002\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00p\00r\00o\00t\00o\00/\00p\00a\00y\00m\00e\00n\00t\00.\00t\00s")
+ (data $60 (i32.const 7644) "<")
+ (data $60.1 (i32.const 7656) "\02\00\00\00&\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00a\00d\00d\00r\00e\00s\00s\00 \00-\00>")
+ (data $61 (i32.const 7708) "<")
+ (data $61.1 (i32.const 7720) "\02\00\00\00$\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00h\00e\00i\00g\00h\00t\00 \00-\00>")
+ (data $62 (i32.const 7772) "L")
+ (data $62.1 (i32.const 7784) "\02\00\00\006\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00p\00a\00y\00m\00e\00n\00t\00s\00T\00o\00A\00d\00d\00r\00e\00s\00s")
+ (data $63 (i32.const 7852) "<")
+ (data $63.1 (i32.const 7864) "\02\00\00\00&\00\00\00>\00>\00 \00c\00u\00r\00r\00e\00n\00t\00 \00s\00e\00n\00d\00e\00r\00:\00 ")
+ (data $64 (i32.const 7916) ",")
+ (data $64.1 (i32.const 7928) "\02\00\00\00\16\00\00\00 \00&\00 \00a\00m\00o\00u\00n\00t\00:\00 ")
+ (data $65 (i32.const 7964) "<")
+ (data $65.1 (i32.const 7976) "\02\00\00\00$\00\00\00>\00>\00 \00t\00o\00t\00a\00l\00R\00e\00c\00e\00i\00v\00e\00d\00:\00 ")
+ (data $66 (i32.const 8028) "L")
+ (data $66.1 (i32.const 8040) "\02\00\00\008\00\00\00>\00>\00 \00E\00X\00I\00T\00I\00N\00G\00 \00p\00a\00y\00m\00e\00n\00t\00s\00T\00o\00A\00d\00d\00r\00e\00s\00s")
+ (data $67 (i32.const 8108) "<")
+ (data $67.1 (i32.const 8120) "\02\00\00\00&\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00s\00e\00n\00d\00e\00r\00s\00 \00-\00>")
  (table $0 5 5 funcref)
  (elem $0 (i32.const 1) $~lib/metashrew-as/assembly/utils/utils/concat~anonymous|0 $~lib/metashrew-as/assembly/utils/box/Box.concat~anonymous|0 $~lib/metashrew-as/assembly/utils/box/Box.concat~anonymous|1 $~lib/metashrew-as/assembly/indexer/index/_flush~anonymous|0)
  (export "_start" (func $assembly/index/_start))
@@ -3102,14 +3102,14 @@
     if (result i32)
      i32.const 0
     else
-     block $__inlined_func$~lib/string/String.__eq$1043 (result i32)
+     block $__inlined_func$~lib/string/String.__eq$1044 (result i32)
       i32.const 1
       local.get $5
       i32.load
       local.tee $2
       local.get $1
       i32.eq
-      br_if $__inlined_func$~lib/string/String.__eq$1043
+      br_if $__inlined_func$~lib/string/String.__eq$1044
       drop
       i32.const 0
       local.get $1
@@ -3117,7 +3117,7 @@
       local.get $2
       i32.eqz
       i32.or
-      br_if $__inlined_func$~lib/string/String.__eq$1043
+      br_if $__inlined_func$~lib/string/String.__eq$1044
       drop
       i32.const 0
       local.get $2
@@ -3134,7 +3134,7 @@
       i32.const 1
       i32.shr_u
       i32.ne
-      br_if $__inlined_func$~lib/string/String.__eq$1043
+      br_if $__inlined_func$~lib/string/String.__eq$1044
       drop
       local.get $1
       local.set $3
@@ -6592,6 +6592,7 @@
   local.get $2
  )
  (func $assembly/indexer/Payment/intoAddress (param $0 i32) (result i32)
+  (local $1 i32)
   local.get $0
   call $~lib/metashrew-as/assembly/blockdata/transaction/Output#intoAddress
   local.tee $0
@@ -6599,11 +6600,27 @@
   if
    i32.const 1
    global.set $~argumentsLength
-   i32.const 7152
+   i32.const 7120
    i32.const 0
    call $~lib/string/String.UTF8.encode@varargs
    return
   end
+  i32.const 7168
+  local.get $0
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+  call $~lib/metashrew-as/assembly/utils/box/Box#constructor
+  call $~lib/metashrew-as/assembly/utils/box/Box#toHexString
+  call $~lib/string/String.__concat
+  local.set $1
+  i32.const 2
+  global.set $~argumentsLength
+  local.get $1
+  i32.const 1
+  call $~lib/string/String.UTF8.encode@varargs
+  call $~lib/metashrew-as/assembly/utils/logging/__log
   local.get $0
  )
  (func $~lib/metashrew-as/assembly/indexer/tables/IndexPointer#selectValue<u32> (param $0 i32) (param $1 i32) (result i32)
@@ -6799,37 +6816,11 @@
    local.get $5
    local.get $1
    i32.load offset=8
+   local.tee $3
    i32.load offset=12
    i32.lt_s
    if
-    i32.const 6704
-    local.get $5
-    call $~lib/util/number/itoa32
-    call $~lib/string/String.__concat
-    i32.const 6816
-    call $~lib/string/String.__concat
-    local.get $1
-    i32.load offset=8
-    local.get $5
-    call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Input>#__get
-    call $~lib/metashrew-as/assembly/blockdata/transaction/Transaction#txid
-    local.tee $3
     local.get $3
-    i32.const 20
-    i32.sub
-    i32.load offset=16
-    call $~lib/metashrew-as/assembly/utils/box/Box#constructor
-    call $~lib/metashrew-as/assembly/utils/box/Box#toHexString
-    call $~lib/string/String.__concat
-    local.set $3
-    i32.const 2
-    global.set $~argumentsLength
-    local.get $3
-    i32.const 1
-    call $~lib/string/String.UTF8.encode@varargs
-    call $~lib/metashrew-as/assembly/utils/logging/__log
-    local.get $1
-    i32.load offset=8
     local.get $5
     call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Input>#__get
     local.tee $6
@@ -6890,6 +6881,18 @@
     local.get $8
     local.get $3
     i32.store offset=12
+    i32.const 6704
+    local.get $7
+    i32.load offset=12
+    call $~lib/util/number/itoa32
+    call $~lib/string/String.__concat
+    local.set $3
+    i32.const 2
+    global.set $~argumentsLength
+    local.get $3
+    i32.const 1
+    call $~lib/string/String.UTF8.encode@varargs
+    call $~lib/metashrew-as/assembly/utils/logging/__log
     i32.const 0
     local.set $3
     loop $for-loop|01
@@ -6945,7 +6948,7 @@
       call $~lib/metashrew-as/assembly/blockdata/transaction/Output#constructor
       i64.load offset=8
       call $~lib/array/Array<u64>#__set
-      i32.const 6864
+      i32.const 6832
       local.get $8
       local.get $3
       call $~lib/array/Array<u64>#__get
@@ -6981,7 +6984,7 @@
       local.tee $3
       i64.load offset=8
       local.set $2
-      i32.const 6976
+      i32.const 6944
       local.get $1
       i32.load offset=8
       local.get $5
@@ -6995,7 +6998,7 @@
       call $~lib/metashrew-as/assembly/utils/box/Box#constructor
       call $~lib/metashrew-as/assembly/utils/box/Box#toHexString
       call $~lib/string/String.__concat
-      i32.const 7120
+      i32.const 7088
       call $~lib/string/String.__concat
       local.get $2
       call $~lib/util/number/utoa64
@@ -7398,7 +7401,7 @@
     local.get $0
     local.get $7
     local.get $4
-    i32.const 7200
+    i32.const 7264
     i32.load
     call_indirect (type $4)
     local.set $1
@@ -7610,7 +7613,7 @@
   i32.ge_u
   if
    i32.const 3344
-   i32.const 7296
+   i32.const 7360
    i32.const 72
    i32.const 50
    call $~lib/builtins/abort
@@ -7944,7 +7947,7 @@
    i32.load offset=8
    i32.gt_s
    if
-    i32.const 7492
+    i32.const 7556
     local.get $0
     i32.load offset=4
     call $~lib/util/number/itoa32
@@ -7954,7 +7957,7 @@
     i32.const 5776
     local.set $2
     block $__inlined_func$~lib/util/string/joinStringArray$561
-     i32.const 7484
+     i32.const 7548
      i32.load
      i32.const 2
      i32.shr_u
@@ -7968,7 +7971,7 @@
      local.get $7
      i32.eqz
      if
-      i32.const 7488
+      i32.const 7552
       i32.load
       local.tee $2
       i32.eqz
@@ -7986,7 +7989,7 @@
        local.get $4
        i32.const 2
        i32.shl
-       i32.const 7488
+       i32.const 7552
        i32.add
        i32.load
        local.tee $2
@@ -8030,7 +8033,7 @@
        local.get $5
        i32.const 2
        i32.shl
-       i32.const 7488
+       i32.const 7552
        i32.add
        i32.load
        local.tee $4
@@ -8083,7 +8086,7 @@
      local.get $7
      i32.const 2
      i32.shl
-     i32.const 7488
+     i32.const 7552
      i32.add
      i32.load
      local.tee $0
@@ -8104,7 +8107,7 @@
      end
     end
     local.get $2
-    i32.const 7520
+    i32.const 7584
     i32.const 278
     i32.const 7
     call $~lib/builtins/abort
@@ -8116,11 +8119,11 @@
  (func $assembly/proto/payment/__proto.SafeDecoder#varint (param $0 i32) (result i64)
   (local $1 i64)
   (local $2 i32)
-  block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$980 (result i32)
+  block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$981 (result i32)
    i32.const 1
    local.get $0
    i32.load8_u offset=8
-   br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$980
+   br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$981
    drop
    local.get $0
    i32.load offset=4
@@ -8131,7 +8134,7 @@
     i32.const 1
     i32.store8 offset=8
     i32.const 1
-    br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$980
+    br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$981
    end
    i32.const 0
   end
@@ -8516,11 +8519,11 @@
   local.get $1
  )
  (func $assembly/proto/payment/__proto.SafeDecoder#skipType (param $0 i32) (param $1 i32)
-  block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$982 (result i32)
+  block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$983 (result i32)
    i32.const 1
    local.get $0
    i32.load8_u offset=8
-   br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$982
+   br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$983
    drop
    local.get $0
    i32.load offset=4
@@ -8531,7 +8534,7 @@
     i32.const 1
     i32.store8 offset=8
     i32.const 1
-    br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$982
+    br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$983
    end
    i32.const 0
   end
@@ -8553,11 +8556,11 @@
         drop
         br $break|0
        end
-       block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$981 (result i32)
+       block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$982 (result i32)
         i32.const 1
         local.get $0
         i32.load8_u offset=8
-        br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$981
+        br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$982
         drop
         local.get $0
         i32.load offset=4
@@ -8568,7 +8571,7 @@
          i32.const 1
          i32.store8 offset=8
          i32.const 1
-         br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$981
+         br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$982
         end
         i32.const 0
        end
@@ -8610,11 +8613,11 @@
       call $assembly/proto/payment/__proto.Decoder#varint@override
       i32.wrap_i64
       local.set $1
-      block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9810 (result i32)
+      block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9820 (result i32)
        i32.const 1
        local.get $0
        i32.load8_u offset=8
-       br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9810
+       br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9820
        drop
        local.get $0
        i32.load offset=4
@@ -8625,7 +8628,7 @@
         i32.const 1
         i32.store8 offset=8
         i32.const 1
-        br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9810
+        br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9820
        end
        i32.const 0
       end
@@ -8681,11 +8684,11 @@
      end
      br $break|0
     end
-    block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9811 (result i32)
+    block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9821 (result i32)
      i32.const 1
      local.get $0
      i32.load8_u offset=8
-     br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9811
+     br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9821
      drop
      local.get $0
      i32.load offset=4
@@ -8696,7 +8699,7 @@
       i32.const 1
       i32.store8 offset=8
       i32.const 1
-      br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9811
+      br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$9821
      end
      i32.const 0
     end
@@ -8791,11 +8794,11 @@
   call $~lib/array/Array<u8>#constructor
   i32.store offset=4
   loop $while-continue|0
-   block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$971 (result i32)
+   block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$972 (result i32)
     i32.const 1
     local.get $1
     i32.load8_u offset=8
-    br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$971
+    br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$972
     drop
     local.get $1
     i32.load offset=4
@@ -8806,7 +8809,7 @@
      i32.const 1
      i32.store8 offset=8
      i32.const 1
-     br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$971
+     br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$972
     end
     i32.const 0
    end
@@ -8850,11 +8853,11 @@
      block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#bytes$41 (result i32)
       i32.const 0
       local.set $2
-      block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$978 (result i32)
+      block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$979 (result i32)
        i32.const 1
        local.get $1
        i32.load8_u offset=8
-       br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$978
+       br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$979
        drop
        local.get $1
        i32.load offset=4
@@ -8865,7 +8868,7 @@
         i32.const 1
         i32.store8 offset=8
         i32.const 1
-        br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$978
+        br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$979
        end
        i32.const 0
       end
@@ -8978,11 +8981,11 @@
     br $while-continue|0
    end
   end
-  block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$985 (result i32)
+  block $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$986 (result i32)
    i32.const 1
    local.get $1
    i32.load8_u offset=8
-   br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$985
+   br_if $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$986
    drop
    local.get $1
    i32.load offset=4
@@ -8993,7 +8996,7 @@
     i32.const 1
     i32.store8 offset=8
     i32.const 1
-    br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$985
+    br $__inlined_func$assembly/proto/payment/__proto.SafeDecoder#invalid$986
    end
    i32.const 0
   end
@@ -9037,7 +9040,7 @@
   i32.or
   if
    i32.const 2608
-   i32.const 7296
+   i32.const 7360
    i32.const 25
    i32.const 7
    call $~lib/builtins/abort
@@ -9167,7 +9170,7 @@
   (local $10 i32)
   i32.const 2
   global.set $~argumentsLength
-  i32.const 7232
+  i32.const 7296
   i32.const 1
   call $~lib/string/String.UTF8.encode@varargs
   call $~lib/metashrew-as/assembly/utils/logging/__log
@@ -9186,7 +9189,7 @@
   call $~lib/arraybuffer/ArrayBuffer#constructor
   local.tee $7
   call $~lib/metashrew-as/assembly/indexer/index/__load_input
-  i32.const 7600
+  i32.const 7664
   local.get $7
   i32.const 4
   i32.const 1073741820
@@ -9221,7 +9224,7 @@
   call $~lib/arraybuffer/ArrayBuffer#constructor
   local.tee $8
   call $~lib/metashrew-as/assembly/indexer/index/__load_input
-  i32.const 7664
+  i32.const 7728
   local.get $8
   i32.const 0
   i32.const 4
@@ -9246,7 +9249,7 @@
   local.set $8
   i32.const 2
   global.set $~argumentsLength
-  i32.const 7728
+  i32.const 7792
   i32.const 1
   call $~lib/string/String.UTF8.encode@varargs
   call $~lib/metashrew-as/assembly/utils/logging/__log
@@ -9310,7 +9313,7 @@
     local.get $2
     call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Input>#__get
     call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Input>#__set
-    block $__inlined_func$~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>$1060 (result i64)
+    block $__inlined_func$~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>$1061 (result i64)
      i32.const 1
      global.set $~argumentsLength
      i64.const 0
@@ -9329,7 +9332,7 @@
      i32.sub
      i32.load offset=16
      i32.eqz
-     br_if $__inlined_func$~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>$1060
+     br_if $__inlined_func$~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>$1061
      drop
      i32.const 8
      call $~lib/arraybuffer/ArrayBuffer#constructor
@@ -9344,7 +9347,7 @@
      i64.load
     end
     local.set $5
-    i32.const 7808
+    i32.const 7872
     local.get $9
     local.get $2
     call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Input>#__get
@@ -9356,7 +9359,7 @@
     call $~lib/metashrew-as/assembly/utils/box/Box#constructor
     call $~lib/metashrew-as/assembly/utils/box/Box#toHexString
     call $~lib/string/String.__concat
-    i32.const 7872
+    i32.const 7936
     call $~lib/string/String.__concat
     local.get $5
     call $~lib/util/number/utoa64
@@ -9379,7 +9382,7 @@
     br $for-loop|01
    end
   end
-  i32.const 7920
+  i32.const 7984
   local.get $3
   call $~lib/util/number/utoa64
   call $~lib/string/String.__concat
@@ -9392,7 +9395,7 @@
   call $~lib/metashrew-as/assembly/utils/logging/__log
   i32.const 2
   global.set $~argumentsLength
-  i32.const 7984
+  i32.const 8048
   i32.const 1
   call $~lib/string/String.UTF8.encode@varargs
   call $~lib/metashrew-as/assembly/utils/logging/__log
@@ -9420,7 +9423,7 @@
    i32.load offset=12
    i32.lt_s
    if
-    i32.const 8064
+    i32.const 8128
     local.get $0
     local.get $2
     call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Input>#__get
@@ -9774,7 +9777,7 @@
  )
  (func $~start
   (local $0 i32)
-  i32.const 8108
+  i32.const 8172
   global.set $~lib/rt/stub/offset
   i32.const 0
   i32.const 5

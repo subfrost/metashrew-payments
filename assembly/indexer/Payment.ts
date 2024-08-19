@@ -9,6 +9,7 @@ import { console } from "metashrew-as/assembly/utils/logging";
 function intoAddress(output: Output): ArrayBuffer {
   const address = output.intoAddress();
   if (address === null) return String.UTF8.encode("UNSPENDABLE");
+  console.log(">> inside INTOADDRESS, address is: " + Box.from(address).toHexString());
   return address as ArrayBuffer;
 }
 
@@ -31,14 +32,14 @@ export class PaymentsIndex extends SpendablesIndex {
     console.log(">> inside indexer")
     super.indexBlock(height, block);
     for (let i = 0; i < block.transactions.length; i++) {
-      console.log(">> INDEXER: current transaction index is " + i.toString() + "with txid: " + Box.from(block.transactions[i].txid()).toHexString());
       const tx = block.transactions[i];
       let inputs = tx.ins;
       let inputIndex = 0;
       // amts are 1:1 with inputs
       let inputAmounts = PaymentsIndex.getInputAmounts(inputs);
       for (let j = 0; j < tx.outs.length; j++) {
-        const output = tx.outs[j];  
+        const output = tx.outs[j]; 
+        // console.log(">> INDEXER: current output is " + Box.from(output.intoAddress()). + "with value: " + output.value.toString());
         let amountRemaining = output.value;
         console.log(">> inside indexer, current amount remaining for transaction:" + Box.from(block.transactions[i].txid()).toHexString() +  "is: " + amountRemaining.toString());
         while (amountRemaining > 0 && inputIndex < inputs.length) {
@@ -102,6 +103,7 @@ export class PaymentsIndex extends SpendablesIndex {
   // provide the amount of sats in each input by using previous output
   static getInputAmounts(inputs: Input[]): Array<u64> {
     let amts = new Array<u64>(inputs.length);
+    console.log(">> inside getInputAmounts, the number of inputs is: " + inputs.length.toString());
     for (let i = 0; i < inputs.length; i++) {
       const prev_out = inputs[i].previousOutput().toArrayBuffer();
       const output = OUTPOINT_TO_OUTPUT.select(prev_out).unwrap();
