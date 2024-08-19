@@ -77,7 +77,7 @@
  (global $~lib/builtins/usize.MAX_VALUE i32 (i32.const -1))
  (global $~lib/native/ASC_OPTIMIZE_LEVEL i32 (i32.const 0))
  (global $~lib/builtins/u32.MAX_VALUE i32 (i32.const -1))
- (global $~lib/memory/__heap_base i32 (i32.const 7020))
+ (global $~lib/memory/__heap_base i32 (i32.const 7244))
  (memory $0 1 32768)
  (data $0 (i32.const 12) "\1c\02\00\00\00\00\00\00\00\00\00\00\04\00\00\00\00\02\00\00000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff\00\00\00\00\00\00\00\00\00\00\00\00")
  (data $1 (i32.const 556) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00(\00\00\00A\00l\00l\00o\00c\00a\00t\00i\00o\00n\00 \00t\00o\00o\00 \00l\00a\00r\00g\00e\00\00\00\00\00")
@@ -128,24 +128,27 @@
  (data $46 (i32.const 5676) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00$\00\00\00K\00e\00y\00 \00d\00o\00e\00s\00 \00n\00o\00t\00 \00e\00x\00i\00s\00t\00\00\00\00\00\00\00\00\00")
  (data $47 (i32.const 5740) ",\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\16\00\00\00~\00l\00i\00b\00/\00m\00a\00p\00.\00t\00s\00\00\00\00\00\00\00")
  (data $48 (i32.const 5788) "\1c\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\02\00\00\00/\00\00\00\00\00\00\00\00\00\00\00")
- (data $49 (i32.const 5820) "l\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00X\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00g\00e\00t\00I\00n\00p\00u\00t\00A\00m\00o\00u\00n\00t\00s\00,\00 \00c\00u\00r\00r\00e\00n\00t\00 \00a\00m\00o\00u\00n\00t\00 \00i\00s\00\00\00\00\00")
- (data $50 (i32.const 5932) "l\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\\\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00i\00n\00d\00e\00x\00e\00r\00,\00 \00c\00u\00r\00r\00e\00n\00t\00 \00a\00m\00o\00u\00n\00t\00 \00r\00e\00m\00a\00i\00n\00i\00n\00g\00 \00i\00s\00")
- (data $51 (i32.const 6044) ",\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\16\00\00\00U\00N\00S\00P\00E\00N\00D\00A\00B\00L\00E\00\00\00\00\00\00\00")
- (data $52 (i32.const 6092) "\1c\00\00\00\00\00\00\00\00\00\00\00\'\00\00\00\08\00\00\00\04\00\00\00\00\00\00\00\00\00\00\00")
- (data $53 (i32.const 6124) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00(\00\00\00i\00n\00s\00i\00d\00e\00 \00v\00i\00e\00w\00 \00f\00u\00n\00c\00t\00i\00o\00n\00\00\00\00\00")
- (data $54 (i32.const 6188) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00 \00\00\00~\00l\00i\00b\00/\00d\00a\00t\00a\00v\00i\00e\00w\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data $55 (i32.const 6252) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\"\00\00\00D\00e\00c\00o\00d\00e\00r\00 \00p\00o\00s\00i\00t\00i\00o\00n\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data $56 (i32.const 6316) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\"\00\00\00 \00i\00s\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e\00!\00\00\00\00\00\00\00\00\00\00\00")
- (data $57 (i32.const 6380) "\1c\00\00\00\03\00\00\00\00\00\00\00.\00\00\00\0c\00\00\00\80\18\00\00\00\00\00\00\c0\18\00\00")
- (data $58 (i32.const 6412) "L\00\00\00\00\00\00\00\00\00\00\00\02\00\00\002\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00p\00r\00o\00t\00o\00/\00p\00a\00y\00m\00e\00n\00t\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00")
- (data $59 (i32.const 6492) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00&\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00a\00d\00d\00r\00e\00s\00s\00 \00-\00>\00\00\00\00\00\00\00")
- (data $60 (i32.const 6556) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00$\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00h\00e\00i\00g\00h\00t\00 \00-\00>\00\00\00\00\00\00\00\00\00")
- (data $61 (i32.const 6620) "L\00\00\00\00\00\00\00\00\00\00\00\02\00\00\006\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00p\00a\00y\00m\00e\00n\00t\00s\00T\00o\00A\00d\00d\00r\00e\00s\00s\00\00\00\00\00\00\00")
- (data $62 (i32.const 6700) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00&\00\00\00>\00>\00 \00c\00u\00r\00r\00e\00n\00t\00 \00s\00e\00n\00d\00e\00r\00:\00 \00\00\00\00\00\00\00")
- (data $63 (i32.const 6764) ",\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\16\00\00\00 \00&\00 \00a\00m\00o\00u\00n\00t\00:\00 \00\00\00\00\00\00\00")
- (data $64 (i32.const 6812) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00$\00\00\00>\00>\00 \00t\00o\00t\00a\00l\00R\00e\00c\00e\00i\00v\00e\00d\00:\00 \00\00\00\00\00\00\00\00\00")
- (data $65 (i32.const 6876) "L\00\00\00\00\00\00\00\00\00\00\00\02\00\00\008\00\00\00>\00>\00 \00E\00X\00I\00T\00I\00N\00G\00 \00p\00a\00y\00m\00e\00n\00t\00s\00T\00o\00A\00d\00d\00r\00e\00s\00s\00\00\00\00\00")
- (data $66 (i32.const 6956) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00&\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00s\00e\00n\00d\00e\00r\00s\00 \00-\00>\00\00\00\00\00\00\00")
+ (data $49 (i32.const 5820) "l\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00R\00\00\00>\00>\00 \00I\00N\00D\00E\00X\00E\00R\00:\00 \00c\00u\00r\00r\00e\00n\00t\00 \00t\00r\00a\00n\00s\00a\00c\00t\00i\00o\00n\00 \00i\00n\00d\00e\00x\00 \00i\00s\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data $50 (i32.const 5932) ",\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\16\00\00\00w\00i\00t\00h\00 \00t\00x\00i\00d\00:\00 \00\00\00\00\00\00\00")
+ (data $51 (i32.const 5980) "l\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00X\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00g\00e\00t\00I\00n\00p\00u\00t\00A\00m\00o\00u\00n\00t\00s\00,\00 \00c\00u\00r\00r\00e\00n\00t\00 \00a\00m\00o\00u\00n\00t\00 \00i\00s\00\00\00\00\00")
+ (data $52 (i32.const 6092) "\8c\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00x\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00i\00n\00d\00e\00x\00e\00r\00,\00 \00c\00u\00r\00r\00e\00n\00t\00 \00a\00m\00o\00u\00n\00t\00 \00r\00e\00m\00a\00i\00n\00i\00n\00g\00 \00f\00o\00r\00 \00t\00r\00a\00n\00s\00a\00c\00t\00i\00o\00n\00:\00\00\00\00\00")
+ (data $53 (i32.const 6236) "\1c\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\08\00\00\00i\00s\00:\00 \00\00\00\00\00")
+ (data $54 (i32.const 6268) ",\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\16\00\00\00U\00N\00S\00P\00E\00N\00D\00A\00B\00L\00E\00\00\00\00\00\00\00")
+ (data $55 (i32.const 6316) "\1c\00\00\00\00\00\00\00\00\00\00\00\'\00\00\00\08\00\00\00\04\00\00\00\00\00\00\00\00\00\00\00")
+ (data $56 (i32.const 6348) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00(\00\00\00i\00n\00s\00i\00d\00e\00 \00v\00i\00e\00w\00 \00f\00u\00n\00c\00t\00i\00o\00n\00\00\00\00\00")
+ (data $57 (i32.const 6412) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00 \00\00\00~\00l\00i\00b\00/\00d\00a\00t\00a\00v\00i\00e\00w\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data $58 (i32.const 6476) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\"\00\00\00D\00e\00c\00o\00d\00e\00r\00 \00p\00o\00s\00i\00t\00i\00o\00n\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data $59 (i32.const 6540) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\"\00\00\00 \00i\00s\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e\00!\00\00\00\00\00\00\00\00\00\00\00")
+ (data $60 (i32.const 6604) "\1c\00\00\00\03\00\00\00\00\00\00\00.\00\00\00\0c\00\00\00`\19\00\00\00\00\00\00\a0\19\00\00")
+ (data $61 (i32.const 6636) "L\00\00\00\00\00\00\00\00\00\00\00\02\00\00\002\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00p\00r\00o\00t\00o\00/\00p\00a\00y\00m\00e\00n\00t\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00")
+ (data $62 (i32.const 6716) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00&\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00a\00d\00d\00r\00e\00s\00s\00 \00-\00>\00\00\00\00\00\00\00")
+ (data $63 (i32.const 6780) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00$\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00h\00e\00i\00g\00h\00t\00 \00-\00>\00\00\00\00\00\00\00\00\00")
+ (data $64 (i32.const 6844) "L\00\00\00\00\00\00\00\00\00\00\00\02\00\00\006\00\00\00>\00>\00 \00i\00n\00s\00i\00d\00e\00 \00p\00a\00y\00m\00e\00n\00t\00s\00T\00o\00A\00d\00d\00r\00e\00s\00s\00\00\00\00\00\00\00")
+ (data $65 (i32.const 6924) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00&\00\00\00>\00>\00 \00c\00u\00r\00r\00e\00n\00t\00 \00s\00e\00n\00d\00e\00r\00:\00 \00\00\00\00\00\00\00")
+ (data $66 (i32.const 6988) ",\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00\16\00\00\00 \00&\00 \00a\00m\00o\00u\00n\00t\00:\00 \00\00\00\00\00\00\00")
+ (data $67 (i32.const 7036) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00$\00\00\00>\00>\00 \00t\00o\00t\00a\00l\00R\00e\00c\00e\00i\00v\00e\00d\00:\00 \00\00\00\00\00\00\00\00\00")
+ (data $68 (i32.const 7100) "L\00\00\00\00\00\00\00\00\00\00\00\02\00\00\008\00\00\00>\00>\00 \00E\00X\00I\00T\00I\00N\00G\00 \00p\00a\00y\00m\00e\00n\00t\00s\00T\00o\00A\00d\00d\00r\00e\00s\00s\00\00\00\00\00")
+ (data $69 (i32.const 7180) "<\00\00\00\00\00\00\00\00\00\00\00\02\00\00\00&\00\00\00>\00>\00 \00V\00I\00E\00W\00:\00 \00s\00e\00n\00d\00e\00r\00s\00 \00-\00>\00\00\00\00\00\00\00")
  (table $0 5 5 funcref)
  (elem $0 (i32.const 1) $~lib/metashrew-as/assembly/utils/utils/concat~anonymous|0 $~lib/metashrew-as/assembly/utils/box/Box.concat~anonymous|0 $~lib/metashrew-as/assembly/utils/box/Box.concat~anonymous|1 $~lib/metashrew-as/assembly/indexer/index/_flush~anonymous|0)
  (export "_start" (func $assembly/index/_start))
@@ -9756,6 +9759,167 @@
    end
   end
  )
+ (func $~lib/util/number/itoa32 (param $value i32) (param $radix i32) (result i32)
+  (local $sign i32)
+  (local $out i32)
+  (local $decimals i32)
+  (local $buffer i32)
+  (local $num i32)
+  (local $offset i32)
+  (local $decimals|8 i32)
+  (local $buffer|9 i32)
+  (local $num|10 i32)
+  (local $offset|11 i32)
+  (local $val32 i32)
+  (local $decimals|13 i32)
+  local.get $radix
+  i32.const 2
+  i32.lt_s
+  if (result i32)
+   i32.const 1
+  else
+   local.get $radix
+   i32.const 36
+   i32.gt_s
+  end
+  if
+   i32.const 2976
+   i32.const 3104
+   i32.const 373
+   i32.const 5
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $value
+  i32.eqz
+  if
+   i32.const 3168
+   return
+  end
+  local.get $value
+  i32.const 31
+  i32.shr_u
+  i32.const 1
+  i32.shl
+  local.set $sign
+  local.get $sign
+  if
+   i32.const 0
+   local.get $value
+   i32.sub
+   local.set $value
+  end
+  local.get $radix
+  i32.const 10
+  i32.eq
+  if
+   local.get $value
+   call $~lib/util/number/decimalCount32
+   local.set $decimals
+   local.get $decimals
+   i32.const 1
+   i32.shl
+   local.get $sign
+   i32.add
+   i32.const 2
+   call $~lib/rt/stub/__new
+   local.set $out
+   local.get $out
+   local.get $sign
+   i32.add
+   local.set $buffer
+   local.get $value
+   local.set $num
+   local.get $decimals
+   local.set $offset
+   i32.const 0
+   i32.const 1
+   i32.ge_s
+   drop
+   local.get $buffer
+   local.get $num
+   local.get $offset
+   call $~lib/util/number/utoa32_dec_lut
+  else
+   local.get $radix
+   i32.const 16
+   i32.eq
+   if
+    i32.const 31
+    local.get $value
+    i32.clz
+    i32.sub
+    i32.const 2
+    i32.shr_s
+    i32.const 1
+    i32.add
+    local.set $decimals|8
+    local.get $decimals|8
+    i32.const 1
+    i32.shl
+    local.get $sign
+    i32.add
+    i32.const 2
+    call $~lib/rt/stub/__new
+    local.set $out
+    local.get $out
+    local.get $sign
+    i32.add
+    local.set $buffer|9
+    local.get $value
+    local.set $num|10
+    local.get $decimals|8
+    local.set $offset|11
+    i32.const 0
+    i32.const 1
+    i32.ge_s
+    drop
+    local.get $buffer|9
+    local.get $num|10
+    i64.extend_i32_u
+    local.get $offset|11
+    call $~lib/util/number/utoa_hex_lut
+   else
+    local.get $value
+    local.set $val32
+    local.get $val32
+    i64.extend_i32_u
+    local.get $radix
+    call $~lib/util/number/ulog_base
+    local.set $decimals|13
+    local.get $decimals|13
+    i32.const 1
+    i32.shl
+    local.get $sign
+    i32.add
+    i32.const 2
+    call $~lib/rt/stub/__new
+    local.set $out
+    local.get $out
+    local.get $sign
+    i32.add
+    local.get $val32
+    i64.extend_i32_u
+    local.get $decimals|13
+    local.get $radix
+    call $~lib/util/number/utoa64_any_core
+   end
+  end
+  local.get $sign
+  if
+   local.get $out
+   i32.const 45
+   i32.store16
+  end
+  local.get $out
+  return
+ )
+ (func $~lib/number/I32#toString (param $this i32) (param $radix i32) (result i32)
+  local.get $this
+  local.get $radix
+  call $~lib/util/number/itoa32
+  return
+ )
  (func $~lib/array/Array<u64>#set:buffer (param $this i32) (param $buffer i32)
   local.get $this
   local.get $buffer
@@ -10325,7 +10489,7 @@
     call $~lib/metashrew-as/assembly/blockdata/transaction/Output#get:value
     call $~lib/array/Array<u64>#__set
     global.get $~lib/metashrew-as/assembly/utils/logging/console
-    i32.const 5840
+    i32.const 6000
     local.get $amts
     local.get $i
     call $~lib/array/Array<u64>#__get
@@ -10352,7 +10516,7 @@
   i32.const 0
   i32.eq
   if
-   i32.const 6064
+   i32.const 6288
    i32.const 0
    i32.const 1
    global.set $~argumentsLength
@@ -10462,6 +10626,23 @@
    call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Transaction>#get:length
    i32.lt_s
    if
+    global.get $~lib/metashrew-as/assembly/utils/logging/console
+    i32.const 5840
+    local.get $i
+    i32.const 10
+    call $~lib/number/I32#toString
+    call $~lib/string/String.__concat
+    i32.const 5952
+    call $~lib/string/String.__concat
+    local.get $block
+    call $~lib/metashrew-as/assembly/blockdata/block/Block#get:transactions
+    local.get $i
+    call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Transaction>#__get
+    call $~lib/metashrew-as/assembly/blockdata/transaction/Transaction#txid
+    call $~lib/metashrew-as/assembly/utils/box/Box.from
+    call $~lib/metashrew-as/assembly/utils/box/Box#toHexString
+    call $~lib/string/String.__concat
+    call $~lib/metashrew-as/assembly/utils/logging/Console#log
     local.get $block
     call $~lib/metashrew-as/assembly/blockdata/block/Block#get:transactions
     local.get $i
@@ -10493,7 +10674,17 @@
       call $~lib/metashrew-as/assembly/blockdata/transaction/Output#get:value
       local.set $amountRemaining
       global.get $~lib/metashrew-as/assembly/utils/logging/console
-      i32.const 5952
+      i32.const 6112
+      local.get $block
+      call $~lib/metashrew-as/assembly/blockdata/block/Block#get:transactions
+      local.get $i
+      call $~lib/array/Array<~lib/metashrew-as/assembly/blockdata/transaction/Transaction>#__get
+      call $~lib/metashrew-as/assembly/blockdata/transaction/Transaction#txid
+      call $~lib/metashrew-as/assembly/utils/box/Box.from
+      call $~lib/metashrew-as/assembly/utils/box/Box#toHexString
+      call $~lib/string/String.__concat
+      i32.const 6256
+      call $~lib/string/String.__concat
       local.get $amountRemaining
       i32.const 10
       call $~lib/number/U64#toString
@@ -11393,7 +11584,7 @@
   call $~lib/array/Array<~lib/array/Array<u8>>#constructor
   local.set $protobufInput
   local.get $hashKeys
-  i32.const 6112
+  i32.const 6336
   local.get $protobufInput
   call $~lib/array/Array<~lib/string/String>#reduce<~lib/array/Array<~lib/array/Array<u8>>>
   drop
@@ -11490,7 +11681,7 @@
   i32.or
   if
    i32.const 1584
-   i32.const 6208
+   i32.const 6432
    i32.const 25
    i32.const 7
    call $~lib/builtins/abort
@@ -11701,7 +11892,7 @@
   i32.ge_u
   if
    i32.const 2320
-   i32.const 6208
+   i32.const 6432
    i32.const 72
    i32.const 50
    call $~lib/builtins/abort
@@ -11712,167 +11903,6 @@
   local.get $byteOffset
   i32.add
   i32.load8_u
-  return
- )
- (func $~lib/util/number/itoa32 (param $value i32) (param $radix i32) (result i32)
-  (local $sign i32)
-  (local $out i32)
-  (local $decimals i32)
-  (local $buffer i32)
-  (local $num i32)
-  (local $offset i32)
-  (local $decimals|8 i32)
-  (local $buffer|9 i32)
-  (local $num|10 i32)
-  (local $offset|11 i32)
-  (local $val32 i32)
-  (local $decimals|13 i32)
-  local.get $radix
-  i32.const 2
-  i32.lt_s
-  if (result i32)
-   i32.const 1
-  else
-   local.get $radix
-   i32.const 36
-   i32.gt_s
-  end
-  if
-   i32.const 2976
-   i32.const 3104
-   i32.const 373
-   i32.const 5
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $value
-  i32.eqz
-  if
-   i32.const 3168
-   return
-  end
-  local.get $value
-  i32.const 31
-  i32.shr_u
-  i32.const 1
-  i32.shl
-  local.set $sign
-  local.get $sign
-  if
-   i32.const 0
-   local.get $value
-   i32.sub
-   local.set $value
-  end
-  local.get $radix
-  i32.const 10
-  i32.eq
-  if
-   local.get $value
-   call $~lib/util/number/decimalCount32
-   local.set $decimals
-   local.get $decimals
-   i32.const 1
-   i32.shl
-   local.get $sign
-   i32.add
-   i32.const 2
-   call $~lib/rt/stub/__new
-   local.set $out
-   local.get $out
-   local.get $sign
-   i32.add
-   local.set $buffer
-   local.get $value
-   local.set $num
-   local.get $decimals
-   local.set $offset
-   i32.const 0
-   i32.const 1
-   i32.ge_s
-   drop
-   local.get $buffer
-   local.get $num
-   local.get $offset
-   call $~lib/util/number/utoa32_dec_lut
-  else
-   local.get $radix
-   i32.const 16
-   i32.eq
-   if
-    i32.const 31
-    local.get $value
-    i32.clz
-    i32.sub
-    i32.const 2
-    i32.shr_s
-    i32.const 1
-    i32.add
-    local.set $decimals|8
-    local.get $decimals|8
-    i32.const 1
-    i32.shl
-    local.get $sign
-    i32.add
-    i32.const 2
-    call $~lib/rt/stub/__new
-    local.set $out
-    local.get $out
-    local.get $sign
-    i32.add
-    local.set $buffer|9
-    local.get $value
-    local.set $num|10
-    local.get $decimals|8
-    local.set $offset|11
-    i32.const 0
-    i32.const 1
-    i32.ge_s
-    drop
-    local.get $buffer|9
-    local.get $num|10
-    i64.extend_i32_u
-    local.get $offset|11
-    call $~lib/util/number/utoa_hex_lut
-   else
-    local.get $value
-    local.set $val32
-    local.get $val32
-    i64.extend_i32_u
-    local.get $radix
-    call $~lib/util/number/ulog_base
-    local.set $decimals|13
-    local.get $decimals|13
-    i32.const 1
-    i32.shl
-    local.get $sign
-    i32.add
-    i32.const 2
-    call $~lib/rt/stub/__new
-    local.set $out
-    local.get $out
-    local.get $sign
-    i32.add
-    local.get $val32
-    i64.extend_i32_u
-    local.get $decimals|13
-    local.get $radix
-    call $~lib/util/number/utoa64_any_core
-   end
-  end
-  local.get $sign
-  if
-   local.get $out
-   i32.const 45
-   i32.store16
-  end
-  local.get $out
-  return
- )
- (func $~lib/number/I32#toString (param $this i32) (param $radix i32) (result i32)
-  local.get $this
-  local.get $radix
-  call $~lib/util/number/itoa32
   return
  )
  (func $~lib/staticarray/StaticArray<~lib/string/String>#__uset (param $this i32) (param $index i32) (param $value i32)
@@ -12658,14 +12688,14 @@
    i32.const 10
    call $~lib/number/I32#toString
    local.set $54
-   i32.const 6400
+   i32.const 6624
    i32.const 1
    local.get $54
    call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-   i32.const 6400
+   i32.const 6624
    i32.const 4752
    call $~lib/staticarray/StaticArray<~lib/string/String>#join
-   i32.const 6432
+   i32.const 6656
    i32.const 278
    i32.const 7
    call $~lib/builtins/abort
@@ -13966,7 +13996,7 @@
   (local $i i32)
   (local $amt i64)
   global.get $~lib/metashrew-as/assembly/utils/logging/console
-  i32.const 6640
+  i32.const 6864
   call $~lib/metashrew-as/assembly/utils/logging/Console#log
   global.get $assembly/tables/tables/PAYMENTS_TABLE
   local.get $height
@@ -14010,14 +14040,14 @@
     call $~lib/metashrew-as/assembly/indexer/tables/IndexPointer#getValue<u64>
     local.set $amt
     global.get $~lib/metashrew-as/assembly/utils/logging/console
-    i32.const 6720
+    i32.const 6944
     local.get $senders
     local.get $i
     call $~lib/array/Array<~lib/arraybuffer/ArrayBuffer>#__get
     call $~lib/metashrew-as/assembly/utils/box/Box.from
     call $~lib/metashrew-as/assembly/utils/box/Box#toHexString
     call $~lib/string/String.__concat
-    i32.const 6784
+    i32.const 7008
     call $~lib/string/String.__concat
     local.get $amt
     i32.const 10
@@ -14036,14 +14066,14 @@
    end
   end
   global.get $~lib/metashrew-as/assembly/utils/logging/console
-  i32.const 6832
+  i32.const 7056
   local.get $totalReceived
   i32.const 10
   call $~lib/number/U64#toString
   call $~lib/string/String.__concat
   call $~lib/metashrew-as/assembly/utils/logging/Console#log
   global.get $~lib/metashrew-as/assembly/utils/logging/console
-  i32.const 6896
+  i32.const 7120
   call $~lib/metashrew-as/assembly/utils/logging/Console#log
   i32.const 0
   local.get $senders
@@ -14756,7 +14786,7 @@
   (local $addr i32)
   (local $response i32)
   global.get $~lib/metashrew-as/assembly/utils/logging/console
-  i32.const 6144
+  i32.const 6368
   call $~lib/metashrew-as/assembly/utils/logging/Console#log
   call $~lib/metashrew-as/assembly/indexer/index/input
   i32.const 4
@@ -14766,7 +14796,7 @@
   call $assembly/proto/payment/payments.PaymentRequest#get:recipient
   local.set $address
   global.get $~lib/metashrew-as/assembly/utils/logging/console
-  i32.const 6512
+  i32.const 6736
   call $~lib/metashrew-as/assembly/indexer/index/input
   i32.const 4
   i32.const 1073741820
@@ -14783,7 +14813,7 @@
   call $assembly/proto/payment/payments.PaymentRequest#get:height
   local.set $height
   global.get $~lib/metashrew-as/assembly/utils/logging/console
-  i32.const 6576
+  i32.const 6800
   call $~lib/metashrew-as/assembly/indexer/index/input
   i32.const 0
   i32.const 4
@@ -14809,7 +14839,7 @@
    i32.lt_s
    if
     global.get $~lib/metashrew-as/assembly/utils/logging/console
-    i32.const 6976
+    i32.const 7200
     local.get $paymentTuple
     call $assembly/indexer/Payment/PaymentTuple#get:senders
     local.get $i

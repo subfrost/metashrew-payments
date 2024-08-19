@@ -31,15 +31,16 @@ export class PaymentsIndex extends SpendablesIndex {
     console.log(">> inside indexer")
     super.indexBlock(height, block);
     for (let i = 0; i < block.transactions.length; i++) {
+      console.log(">> INDEXER: current transaction index is " + i.toString() + "with txid: " + Box.from(block.transactions[i].txid()).toHexString());
       const tx = block.transactions[i];
       let inputs = tx.ins;
       let inputIndex = 0;
       // amts are 1:1 with inputs
       let inputAmounts = PaymentsIndex.getInputAmounts(inputs);
       for (let j = 0; j < tx.outs.length; j++) {
-        const output = tx.outs[j];
+        const output = tx.outs[j];  
         let amountRemaining = output.value;
-        console.log(">> inside indexer, current amount remaining is" + amountRemaining.toString());
+        console.log(">> inside indexer, current amount remaining for transaction:" + Box.from(block.transactions[i].txid()).toHexString() +  "is: " + amountRemaining.toString());
         while (amountRemaining > 0 && inputIndex < inputs.length) {
           const curr = inputs[inputIndex];
           const amt = inputAmounts[inputIndex];
