@@ -72,9 +72,11 @@ export class PaymentsIndex extends SpendablesIndex {
             .keyword("/")
             .select(inputAddr as ArrayBuffer);
           if (ptr.length() == 0) {
-            recipientPointer.append(inputAddr as ArrayBuffer);
+            recipientPointer.keyword("/").append(inputAddr as ArrayBuffer);
           }
           ptr.appendValue<u64>(output.value);
+          console.log(">> INDEXER: what the table looks like: ");
+          console.logUTF8(ptr.get());
         }
       }
     }
@@ -82,11 +84,12 @@ export class PaymentsIndex extends SpendablesIndex {
 
   // gets the senders and the amounts sent to a specific address
   static paymentsToAddress(height: u32, address: ArrayBuffer): PaymentTuple {
-    console.log(">> inside paymentsToAddress")
+    console.log(">> inside paymentsToAddress for address: ");
+    console.logUTF8(address);
     const recipientPtr = PAYMENTS_TABLE.selectValue<u32>(height)
       .keyword("/")
       .select(address);
-    const senderList = recipientPtr.getList();
+    const senderList = recipientPtr.keyword("/").getList();
     let senders = new Array<ArrayBuffer>(senderList.length);
     let totalReceived: u64 = 0;
     for (let i = 0; i < senderList.length; i++) {
@@ -103,12 +106,12 @@ export class PaymentsIndex extends SpendablesIndex {
   // provide the amount of sats in each input by using previous output
   static getInputAmounts(inputs: Input[]): Array<u64> {
     let amts = new Array<u64>(inputs.length);
-    console.log(">> inside getInputAmounts, the number of inputs is: " + inputs.length.toString());
     for (let i = 0; i < inputs.length; i++) {
       const prev_out = inputs[i].previousOutput().toArrayBuffer();
-      const output = OUTPOINT_TO_OUTPUT.select(prev_out).unwrap();
-      amts[i] = bytesToOutput(output).value;
-      console.log(">> inside getInputAmounts, current amount is" + amts[i].toString());
+      const output = bytesToOutput(OUTPOINT_TO_OUTPUT.select(prev_out).get());
+      amts[i] = output.value;
+      console.log(">> inside getInputAmounts, current amount is " + amts[i].toString() + " for address: " );
+      console.logUTF8(intoAddress(output));
     }
     return amts;
   }
